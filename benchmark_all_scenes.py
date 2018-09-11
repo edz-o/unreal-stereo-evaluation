@@ -11,7 +11,7 @@ time1 = time.time()
 
 
 Algorithms = {  
-				'ELAS' : ['elas', '/home/yzhang/bin/MiddEval3/alg-ELAS', 'python', 'run_ELAS.py'],
+				'ELAS' : ['elas', 'MiddEval3/alg-ELAS', 'python', 'run_ELAS.py'],
 			}
 
 
