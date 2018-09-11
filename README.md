@@ -52,17 +52,21 @@
 4. Copy our python wrapper for the algorithm to `MiddEval3/alg-ELAS`.
 
     ```
+    $ cd $ROOT
     $ cp run_ELAS.py MiddEval3/alg-ELAS
     ```
 
 ### Download unrealstereo data
 
-    ```
-    $ wget https://stereo.unrealcv.org/Data.zip (128.220.35.143:/home/yzhang/bin/unrealstereo-release/minimum/Data.zip)
-    $ unzip Data.zip
-    ```
+Download the data we used as follows,
+
+```
+$ wget https://stereo.unrealcv.org/Data.zip (128.220.35.143:/home/yzhang/bin/unrealstereo-release/minimum/Data.zip)
+$ unzip Data.zip
+```
 
 ## Reproduce result
-    ```
-    $ sh run.sh
-    ```
+
+```shell
+$ sh run.sh
+```
