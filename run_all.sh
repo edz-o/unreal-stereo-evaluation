@@ -1,0 +1,3 @@
+python benchmark_all_scenes.py
+python evaluate_all_results.py
+python plot_result.py

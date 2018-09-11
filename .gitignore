@@ -1,0 +1,8 @@
+*.jpg
+*.png
+*.exr
+*.npy
+*.pyc
+*.json
+*.pfm
+*.pdf
