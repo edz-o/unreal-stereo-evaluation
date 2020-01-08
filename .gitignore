@@ -7,3 +7,4 @@
 *.pfm
 *.pdf
 *.zip
+!DatasetFiles/*
