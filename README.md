@@ -76,3 +76,20 @@ unzip unrealstereo_data_hazardous.zip
 ```shell
 sh run_all.sh
 ```
+## Annotation of hazardous regions on Middlebury and KITTI 2015
+
+The annotations used in our paper can be downloaded [here](https://cs.jhu.edu/~yzh/kitti15_mb.zip).
+
+## License and Citation
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+If you find UnrealStereo useful in your research, please consider citing:
+
+    @article{zhang2016unrealstereo,
+      author    = {Zhang, Yi and Qiu, Weichao and Chen, Qi 
+                      and Hu, Xiaolin and Yuille, Alan},
+      title     = {UnrealStereo: {A} Synthetic Dataset for Analyzing Stereo Vision},
+      journal   = {arXiv preprint arXiv:1612.04647},
+      year      = {2016},
+    }
