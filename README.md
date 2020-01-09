@@ -74,5 +74,5 @@ unzip unrealstereo_data_hazardous.zip
 ## Reproduce result
 
 ```shell
-sh run.sh
+sh run_all.sh
 ```
