@@ -67,7 +67,7 @@
 Download the data we used as follows,
 
 ```shell
-wget https://cs.jhu.edu/unrealstereo_data_hazardous.zip 
+wget https://cs.jhu.edu/~yzh/unrealstereo_data_hazardous.zip 
 unzip unrealstereo_data_hazardous.zip
 ```
 
