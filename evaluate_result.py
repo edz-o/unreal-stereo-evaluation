@@ -85,7 +85,7 @@ def parse_args():
     parser.add_argument('--conf', dest='eval_conf', help='Evaluation configuration',
                         default='/', type=str)
     parser.add_argument('--ds', dest='dataset', help='Dataset file')
-    
+
     if len(sys.argv) == 1:
         parser.print_help()
         sys.exit(1)
@@ -103,6 +103,8 @@ if __name__ == '__main__':
     print(args)
 
     evaluation_result_path = osp.join(os.getcwd(),'Evaluation/results')
+    if not osp.isdir(evaluation_result_path):
+        os.makedirs(evaluation_result_path)
     if eval_conf['append']:
         print(eval_conf['append'])
         result_path = eval_conf['append_file']
@@ -133,21 +135,21 @@ if __name__ == '__main__':
         if eval_conf["region"]["full"]:
             TYPE = 'full'
             ERRMAP_OUT_PATH = osp.join(OUT_PATH, TYPE, im + '_err' + '.png')
-            outputs[im]['{}_result'.format(TYPE)] = evaluate_on_masked_regions(disp_est, 
+            outputs[im]['{}_result'.format(TYPE)] = evaluate_on_masked_regions(disp_est,
                                                     dispL_gth, ERRMAP_OUT_PATH, eval_conf["store_img"])
 
         if eval_conf["region"]["noc"]:
             TYPE = 'noc'
             ERRMAP_OUT_PATH = osp.join(OUT_PATH, TYPE, im + '_err' + '.png')
             mask = noc_mask
-            outputs[im]['{}_result'.format(TYPE)] = evaluate_on_masked_regions(disp_est, 
+            outputs[im]['{}_result'.format(TYPE)] = evaluate_on_masked_regions(disp_est,
                                                     dispL_gth*mask, ERRMAP_OUT_PATH, eval_conf["store_img"])
 
         if eval_conf["region"]["occ"]:
             TYPE = 'occ'
             ERRMAP_OUT_PATH = osp.join(OUT_PATH, TYPE, im + '_err' + '.png')
             mask = ~noc_mask
-            outputs[im]['{}_result'.format(TYPE)] = evaluate_on_masked_regions(disp_est, 
+            outputs[im]['{}_result'.format(TYPE)] = evaluate_on_masked_regions(disp_est,
                                                     dispL_gth*mask, ERRMAP_OUT_PATH, eval_conf["store_img"])
 
         if eval_conf["region"]["tl"]:
@@ -156,16 +158,16 @@ if __name__ == '__main__':
             if osp.isfile(dataset[im]['textureless_msk']):
                 #assert_exist(dataset[im]['textureless_msk'])
                 mask = read_msk(dataset[im]['textureless_msk']) * noc_mask
-                outputs[im]['{}_result'.format(TYPE)] = evaluate_on_masked_regions(disp_est, 
+                outputs[im]['{}_result'.format(TYPE)] = evaluate_on_masked_regions(disp_est,
                                                         dispL_gth*mask, ERRMAP_OUT_PATH, eval_conf["store_img"])
-    
+
         if eval_conf["region"]["sp"]:
             TYPE = 'reflective'
             ERRMAP_OUT_PATH = osp.join(OUT_PATH, TYPE, im + '_err' + '.png')
             if osp.isfile(dataset[im]['specular_msk']):
                 #assert_exist(dataset[im]['specular_msk'])
                 mask = read_msk(dataset[im]['specular_msk']) * noc_mask
-                outputs[im]['{}_result'.format(TYPE)] = evaluate_on_masked_regions(disp_est, 
+                outputs[im]['{}_result'.format(TYPE)] = evaluate_on_masked_regions(disp_est,
                                                     dispL_gth*mask, ERRMAP_OUT_PATH, eval_conf["store_img"])
 
         if eval_conf["region"]["tr"]:
@@ -174,7 +176,7 @@ if __name__ == '__main__':
             if osp.isfile(dataset[im]['transparent_msk']):
                 #assert_exist(dataset[im]['transparent_msk'])
                 mask = read_msk(dataset[im]['transparent_msk']) * noc_mask
-                outputs[im]['{}_result'.format(TYPE)] = evaluate_on_masked_regions(disp_est, 
+                outputs[im]['{}_result'.format(TYPE)] = evaluate_on_masked_regions(disp_est,
                                                         dispL_gth*mask, ERRMAP_OUT_PATH, eval_conf["store_img"])
 
         if eval_conf["region"]["bd"]:
@@ -183,10 +185,10 @@ if __name__ == '__main__':
             if osp.isfile(dataset[im]['boundary_msk']):
                 #assert_exist(dataset[im]['boundary_msk'])
                 mask = read_msk(dataset[im]['boundary_msk']) * noc_mask
-                outputs[im]['{}_result'.format(TYPE)] = evaluate_on_masked_regions(disp_est, 
-                                                        dispL_gth*mask, ERRMAP_OUT_PATH, eval_conf["store_img"])        
+                outputs[im]['{}_result'.format(TYPE)] = evaluate_on_masked_regions(disp_est,
+                                                        dispL_gth*mask, ERRMAP_OUT_PATH, eval_conf["store_img"])
 
-        
+
         # Progress bar
         sys.stdout.write('\r')
         sys.stdout.write('%d/%d' % (i+1, Total_img))

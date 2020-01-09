@@ -20,7 +20,7 @@ __C.IMG_HEIGHT = 480.0
 __C.IMG_WIDTH = 640.0
 __C.f = __C.IMG_WIDTH / 2
 
-__C.DATA_ROOT = osp.join(os.getcwd(), 'Data')
+__C.DATA_ROOT = osp.join(os.getcwd(), 'unrealstereo_data_hazardous')
 
 __C.datasets = {
 				'10k' : {   'filename': 'DatasetFiles/unrealstereo.json',

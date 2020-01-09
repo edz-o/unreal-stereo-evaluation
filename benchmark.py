@@ -73,5 +73,8 @@ if __name__ == '__main__':
             subprocess.call(CMD4Algorithm)
 
     timestamp = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d_%H:%M:%S')
-    with open(osp.join(CWD, 'Experiments/Output','{}_{}.json'.format(alg, timestamp)), 'w') as f:
+    output_dir = osp.join(CWD, 'Experiments/Output')
+    if not osp.isdir(output_dir):
+        os.makedirs(output_dir)
+    with open(osp.join(output_dir,'{}_{}.json'.format(alg, timestamp)), 'w') as f:
         json.dump(alg_outputs, f, indent = 4)
