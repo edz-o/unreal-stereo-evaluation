@@ -85,11 +85,12 @@ The annotations used in our paper can be downloaded [here](https://cs.jhu.edu/~y
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 If you find UnrealStereo useful in your research, please consider citing:
-
-    @article{zhang2016unrealstereo,
-      author    = {Zhang, Yi and Qiu, Weichao and Chen, Qi 
-                      and Hu, Xiaolin and Yuille, Alan},
-      title     = {UnrealStereo: {A} Synthetic Dataset for Analyzing Stereo Vision},
-      journal   = {arXiv preprint arXiv:1612.04647},
-      year      = {2016},
+    
+    @inproceedings{zhang2018unrealstereo,
+      title={Unrealstereo: Controlling hazardous factors to analyze stereo vision},
+      author={Zhang, Yi and Qiu, Weichao and Chen, Qi and Hu, Xiaolin and Yuille, Alan},
+      booktitle={2018 International Conference on 3D Vision (3DV)},
+      pages={228--237},
+      year={2018},
+      organization={IEEE}
     }
