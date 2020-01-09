@@ -2,6 +2,8 @@
 
 [UnrealStereo](https://stereo.unrealcv.org/) is a project for generating images from virtual worlds for stereo vision. It is based on [UnrealCV](http://unrealcv.github.io/) which is an open source software connecting Computer Vision to Unreal Engine.
 
+This repository contains codes and data for reproducing the results in our paper.
+
 ## Getting Started
 
 ### Prerequisites
@@ -73,7 +75,7 @@ wget https://cs.jhu.edu/~yzh/unrealstereo_data_hazardous.zip
 unzip unrealstereo_data_hazardous.zip
 ```
 
-### Reproduce result
+### Reproduce the result
 
 ```shell
 sh run_all.sh
