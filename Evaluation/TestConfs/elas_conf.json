@@ -1,0 +1,14 @@
+{
+    "name" : "elas",
+    "append" : false,
+    "append_file" : "Evaluation/results/elas2017-10-31_20:57:22.json",
+    "region" : {
+        "full":true, 
+        "noc":true, 
+        "tl":true, 
+        "sp":true, 
+        "tr":true, 
+        "occ":false, 
+        "bd":true},
+    "store_img" : true
+}

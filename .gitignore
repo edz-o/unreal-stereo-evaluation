@@ -8,3 +8,4 @@
 *.pdf
 *.zip
 !DatasetFiles/*
+!Evaluation/*/*.json
