@@ -75,6 +75,8 @@ wget https://cs.jhu.edu/~yzh/unrealstereo_data_hazardous.zip
 unzip unrealstereo_data_hazardous.zip
 ```
 
+The 10k synthetic sequences can be downloaded from [here](https://cs.jhu.edu/~yzh/unrealstereo_10k.zip).
+
 ### Reproduce the result
 
 ```shell
